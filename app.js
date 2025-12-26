@@ -1,7 +1,7 @@
 // =================================================================
 // CONFIGURATION : REMPLACEZ PAR VOTRE URL GOOGLE APPS SCRIPT
 // =================================================================
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwP1CWXgGqlX-lmZGU5Px0rJ-aKxhmflW4V9oFMsC_b6cTzDtqzAxv4UMW5PWk6b0HJcw/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwWXwjAKq9jCZfs2i_0zr-JQAqSS291E2KgAZ44QDHY0NH2otCCeYaxUz2mcgll6lfhCg/exec"; 
 
 // =================================================================
 // LOGIQUE DU DASHBOARD (dashboard.html)
@@ -40,8 +40,10 @@ async function fetchData() {
 
     try {
         // Récupération des données via GET sur Google Script
-        const response = await fetch(SCRIPT_URL);
-        let data = await response.json();
+        const response = await fetch(SCRIPT_URL, {
+        method: 'GET',
+        redirect: 'follow' // Indispensable pour Google Apps Script
+    });
 
         // Filtrage identique à la version précédente
         data = data.filter(row => {
@@ -219,5 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('flipped');
+    });
+});
