@@ -2,24 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="T-nzAP5o8pEZZM3fn_VnT2pFjrA2bwDTImDHK9XInf0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Admin Sophie - Guichet unique pour vos démarches administratives : état civil, emploi, santé, retraite.">
+    <meta name="description" content="Admin Sophie - Guichet unique pour vos démarches administratives.">
     <title>Admin Sophie - Votre Guichet Unique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
-<body class="site-public"> <header class="header" role="banner">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    
+    <header class="header">
         <div class="nav-container">
             <a href="#" class="logo-site">
-                <span class="logo-icon" aria-hidden="true">AS</span>
+                <span class="logo-icon">AS</span>
                 <span>Admin Sophie</span>
             </a>
-            <nav role="navigation" aria-label="Menu principal">
+            <nav>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#infos">Informations</a></li>
+                    <li><a href="#infos">Infos</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -27,133 +29,159 @@
     </header>
 
     <main>
-        <section class="hero" id="accueil" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <h1 id="hero-title">Votre Guichet Unique de Proximité</h1>
-                <p>Accédez à tous vos services publics en un seul lieu. Simplifiez vos démarches administratives avec Admin Sophie.</p>
-                <a href="dashboard.html" class="cta-button">Découvrir nos services</a>
-            </div>
-        </section>
+        <section class="hero" id="accueil">
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1>Simplifiez votre vie <br> administrative</h1>
+            <p>Accédez à tous vos services publics en un seul lieu. Un accompagnement de proximité pour vos démarches.</p>
+            <a href="#services" class="cta-button">Découvrir nos services</a>
+        </div>
+        
+        <div class="hero-logo-container">
+            <img src="logo.png" alt="Admin Sophie Logo" class="main-hero-logo">
+        </div>
+    </div>
+</section>
 
-        <section class="section" id="services" aria-labelledby="services-title">
-            <h2 id="services-title" class="section-title">Nos Services</h2>
+        <section class="section" id="services">
+            <h2 class="section-title">Mes Services</h2>
             <div class="services-grid">
-                <article class="service-card">
-                    <i class="service-icon fa-solid fa-file-lines" aria-hidden="true"></i> <h3>État Civil</h3>
-                    <p>Demande d'actes de naissance, mariage, décès. Accompagnement pour toutes vos démarches.</p>
-                </article>
-                <article class="service-card">
-                    <i class="service-icon fa-solid fa-briefcase" aria-hidden="true"></i> <h3>Emploi & Formation</h3>
-                    <p>Inscription France Travail (Pôle Emploi), recherche d'emploi et formation professionnelle.</p>
-                </article>
-                <article class="service-card">
-                    <i class="service-icon fa-solid fa-heart-pulse" aria-hidden="true"></i> <h3>Santé & Assurance</h3>
-                    <p>Carte Vitale, CPAM, mutuelle, et demandes de remboursement.</p>
-                </article>
-                <article class="service-card">
-                    <i class="service-icon fa-solid fa-house-chimney" aria-hidden="true"></i> <h3>Logement & Énergie</h3>
-                    <p>Aides au logement CAF, demandes APL, et chèque énergie.</p>
-                </article>
+                
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="service-icon fa-solid fa-pen-nib"></i>
+                            <h3>Travaux Bureautiques</h3>
+                            <p>courriers officiels, demande de recours, formulaire CERFA, Correction et mise en page CV, lettre de motiv, rapport.</p>
+                            <span class="read-more">Cliquer pour retourner <i class="fa-solid fa-rotate"></i></span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Travaux Bureautiques</h3>
+                            <p>Rédiger un courrier administratif ou remplir un formulaire complexe demande du temps et de la précision.. Grâce à une plume soignée et une connaissance des codes de l'administration, je m'assure que vos demandes sont claires, professionnelles et qu'elles reçoivent l'attention qu'elles méritent.</p>
+                            <a href="etat-civil.html" class="cta-mini" onclick="event.stopPropagation();">Page complète</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="service-icon fa-solid fa-briefcase"></i>
+                            <h3>Emploi & Formation</h3>
+                            <p>Recherche et insertion professionnelle.</p>
+                            <span class="read-more">Cliquer pour retourner <i class="fa-solid fa-rotate"></i></span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Emploi & Formation</h3>
+                            <p>Aide à l'inscription France Travail, création de CV, lettres de motivation et recherche de formations adaptées.</p>
+                            <a href="emploi-formation.html" class="cta-mini" onclick="event.stopPropagation();">Page complète</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="service-icon fa-solid fa-heart-pulse"></i>
+                            <h3>Gestion Du Courrier Et Du Courriel</h3>
+                            <p>Gestion de la Correspondance, Tri et Traitement Immédiat, Organisation et Archivage, Envoi des courriers et colis.</p>
+                            <span class="read-more">Cliquer pour retourner <i class="fa-solid fa-rotate"></i></span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Gestion Du Courrier Et Du Courriel</h3>
+                            <p>Ne laissez plus vos boîtes aux lettres déborder. Je trie, traite et classe vos courriers papiers ainsi que vos e-mails pour que vous ne passiez plus à côté d'une information cruciale. De l'archivage rigoureux à la réponse aux messages urgents, j'organise vos flux de communication pour qu’ils soient toujours fluides, sécurisés et parfaitement rangés.</p>
+                            <a href="sante-assurance.html" class="cta-mini" onclick="event.stopPropagation();">Page complète</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="service-icon fa-solid fa-house-chimney"></i>
+                            <h3>Logement & Énergie</h3>
+                            <p>Aides CAF et factures d'énergie.</p>
+                            <span class="read-more">Cliquer pour retourner <i class="fa-solid fa-rotate"></i></span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Logement & Énergie</h3>
+                            <p>Demandes d'APL, dossiers de logement social, chèque énergie et litiges liés aux fournisseurs.</p>
+                            <a href="logement-energie.html" class="cta-mini" onclick="event.stopPropagation();">Page complète</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section class="bg-light" id="infos">
-            <div class="inner-container">
+        <section class="section" id="infos" style="background-color: #f1f5f9; max-width: 100%;">
+            <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
                 <h2 class="section-title">Informations Pratiques</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="service-card">
+                <div class="form-grid">
+                    <div class="info-card">
                         <h3><i class="fa-solid fa-clock"></i> Horaires</h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li>Lundi - Vendredi : 9h - 17h</li>
-                            <li>Samedi : 9h - 12h</li>
-                        </ul>
+                        <p>Lundi - Vendredi : 09h00 - 17h00</p>
+                        <p>Samedi : 09h00 - 12h00</p>
                     </div>
-                    <div class="service-card">
+                    <div class="info-card">
                         <h3><i class="fa-solid fa-handshake"></i> Engagements</h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li>Accueil gratuit</li>
-                            <li>Confidentialité garantie</li>
-                            <li>Accès PMR</li>
-                        </ul>
+                        <p>Confidentialité absolue</p>
+                        <p>Accès PMR & Accueil gratuit</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="contact" aria-labelledby="contact-title">
-            <h2 id="contact-title" class="section-title">Contactez-nous</h2>
+        <section class="section" id="contact">
             <div class="contact-form">
-                <form id="contactForm" novalidate>
+                <h2 id="contact-title">Prêt à simplifier <br> vos démarches ?</h2>
+                
+                <form class="form-grid">
                     <div class="form-group">
-                        <label for="nom">Nom et Prénom *</label>
-                        <input type="text" id="nom" name="nom" required aria-required="true" autocomplete="name">
-                        <span class="error-message" id="error-nom"></span>
+                        <label>Comment vous appelez-vous ?</label>
+                        <input type="text" placeholder="Votre nom complet" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
-                        <span class="error-message" id="error-email"></span>
+                        <label>Où vous répondre ?</label>
+                        <input type="email" placeholder="Votre adresse email" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input 
-                            type="tel" 
-                            id="telephone" 
-                            name="telephone" 
-                            autocomplete="tel"
-                            pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$"
-                            title="Veuillez entrer un numéro de téléphone valide (ex: 06 12 34 56 78 ou +33 6 12 34 56 78)"
-                        >
-                        <span class="error-message" id="error-telephone"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service concerné *</label>
-                        <select id="service" name="service" required aria-required="true">
-                            <option value="">Sélectionnez un service</option>
-                            <option value="Etat Civil">État Civil</option>
-                            <option value="Emploi & Formation">Emploi & Formation</option>
-                            <option value="Santé & Assurance">Santé & Assurance</option>
-                            <option value="Logement & Energie">Logement & Énergie</option>
-                            <option value="Autre">Autre</option>
+                        <label>Quel service ?</label>
+                        <select required>
+                            <option value="" disabled selected>Choisir un service</option>
+                            <option value="redaction">Rédaction</option>
+                            <option value="emploi">Emploi</option>
+                            <option value="sante">Santé</option>
+                            <option value="logement">Logement</option>
                         </select>
-                        <span class="error-message" id="error-service"></span>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="sujet">Sujet de votre demande *</label>
-                        <select id="sujet" name="sujet" required aria-required="true">
-                            <option value="">Sélectionnez un sujet</option>
-                            <option value="rdv">Demande de rendez-vous</option>
-                            <option value="info">Demande d'information</option>
-                            <option value="reclamation">Réclamation</option>
-                        </select>
-                        <span class="error-message" id="error-sujet"></span>
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="06 .. .. .. ..">
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Votre message *</label>
-                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-                        <span class="error-message" id="error-message"></span>
+
+                    <div class="form-group full-width">
+                        <label>Dites-moi en plus</label>
+                        <textarea rows="4" placeholder="Décrivez votre situation..."></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Envoyer la demande</button>
+
+                    <div class="full-width">
+                        <button type="submit" class="submit-button">
+                            Envoyer ma demande <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-        <p><a href="dashboard.html">Accéder au Dashboard</a></p>
-        <p>10 impasses de montededou, 81130 mailhoc</p>
+    <footer class="footer">
+        <p>10 impasses de montededou, 81130 Mailhoc</p>
         <p>&copy; 2025 Admin Sophie - <a href="#">Mentions légales</a></p>
     </footer>
 
-    <script src="app.js"></script> </body>
+</body>
 </html>
-
-
-
-
-
-
-
